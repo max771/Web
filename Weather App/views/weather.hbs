@@ -1,0 +1,29 @@
+{{> header}}
+<body>
+     <div class="container">
+        <div class="row">
+             <div class="col-3">
+                 <ul class="nav flex-column">
+                     <li class="nav-item">
+                         <a class="nav-link active" href="../weather/Zhytomyr">Житомир</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link active" href="../weather/Kiev">Київ</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link active" href="../weather/Odesa">Одеса</a>
+                     </li>
+                 </ul>
+             </div>
+            <div class="col-9 ">
+                <div class="row justify-content-md-center"><img  src="http://openweathermap.org/img/w/{{weather.weather.[0].icon}}.png"></div>
+                <div class="row justify-content-md-center">Місто: {{city}}</div>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-primary">Температура: {{weather.main.temp}}&degC</li>
+                    <li class="list-group-item list-group-item-primary">Вологість: {{weather.main.humidity}} %</li>
+                    <li class="list-group-item list-group-item-primary">Тиск: {{weather.main.pressure}}мм</li>
+                </ul>
+        </div>
+    </div>
+</body>
+{{> footer}}
